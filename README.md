@@ -2,8 +2,7 @@
 
 > _“Learn, Connect and Grow” — Bridging borders through language._
 
-
-![image](https://github.com/user-attachments/assets/cf1f60df-063c-4f5b-a221-10ee742fb16e)
+![image](https://github.com/user-attachments/assets/e16f2d32-3ede-4ab1-bc5f-97dfa014d5c2)
 
 
 ## 📌 Project Overview
