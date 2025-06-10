@@ -42,11 +42,13 @@ This project leverages modern web technologies (MERN stack) and project manageme
 
 > *(Add actual image files inside `/assets` folder and update paths below)*
 
-- ![Login Page](assets/login.png)
-- ![Dashboard](assets/dashboard.png)
-- ![Slot Booking](assets/slot-booking.png)
-- ![Study Materials](assets/study-materials.png)
-
+- ![image](https://github.com/user-attachments/assets/e542dc72-eaa9-4934-aafe-bb5787eb2697)
+- ![image](https://github.com/user-attachments/assets/92b287e3-1d40-479c-ba3c-f0fdb15a22a2)
+- ![image](https://github.com/user-attachments/assets/c845b8b1-7f7c-4081-9bcc-829ed49804bb)
+- ![image](https://github.com/user-attachments/assets/649c9159-9fbf-4d54-b848-3bd8a5acf1d1)
+- ![image](https://github.com/user-attachments/assets/f9f0e1bd-5d4e-43ca-8b02-fca5d7d00fbf)
+- ![image](https://github.com/user-attachments/assets/8479f298-9da9-4382-ab96-5a532aa252a0)
+- 
 ---
 
 ## ⚙️ Installation & Run Locally
