@@ -8,7 +8,7 @@
 
 ## 📌 Project Overview
 
-**LinguaLeap** is a personalized web-based language learning platform developed during an intensive internship at BCS. It connects students and teachers globally through real-time one-on-one video sessions, offering flexible scheduling, study materials, slot booking, and multilingual support.
+**LinguaLeap** is a personalized web-based language learning platform. It connects students and teachers globally through real-time one-on-one video sessions, offering flexible scheduling, study materials, slot booking, and multilingual support.
 
 This project leverages modern web technologies (MERN stack) and project management practices (Agile, Jira) to deliver a robust, scalable, and user-friendly learning system.
 
