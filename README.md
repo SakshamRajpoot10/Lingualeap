@@ -39,8 +39,6 @@ This project leverages modern web technologies (MERN stack) and project manageme
 
 ## 📸 Snapshots
 
-> *(Add actual image files inside `/assets` folder and update paths below)*
-
  ![image](https://github.com/user-attachments/assets/e542dc72-eaa9-4934-aafe-bb5787eb2697)
  ![image](https://github.com/user-attachments/assets/92b287e3-1d40-479c-ba3c-f0fdb15a22a2)
  ![image](https://github.com/user-attachments/assets/c845b8b1-7f7c-4081-9bcc-829ed49804bb)
