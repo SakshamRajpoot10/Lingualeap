@@ -48,7 +48,11 @@ This project leverages modern web technologies (MERN stack) and project manageme
 - ![image](https://github.com/user-attachments/assets/649c9159-9fbf-4d54-b848-3bd8a5acf1d1)
 - ![image](https://github.com/user-attachments/assets/f9f0e1bd-5d4e-43ca-8b02-fca5d7d00fbf)
 - ![image](https://github.com/user-attachments/assets/8479f298-9da9-4382-ab96-5a532aa252a0)
-- 
+- ![image](https://github.com/user-attachments/assets/b381c455-03ab-458b-892b-660ed58e202c)
+- ![image](https://github.com/user-attachments/assets/a277d683-1846-41cb-a395-437231e5a4f6)
+- ![image](https://github.com/user-attachments/assets/71dc29b9-017e-4714-8733-8a9d26b2a83c)
+- ![image](https://github.com/user-attachments/assets/c6c095c8-f33a-41fb-8c1d-9b0357322f2b)
+
 ---
 
 ## ⚙️ Installation & Run Locally
