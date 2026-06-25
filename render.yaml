@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: lingualeap-backend
+    runtime: node
+    rootDir: Nodejs
+    buildCommand: npm install
+    startCommand: node Admin.js
+    plan: free
+    envVars:
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        sync: false
