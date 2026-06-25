@@ -79,3 +79,4 @@ This project leverages modern web technologies (MERN stack) and project manageme
 ```bash
 git clone https://github.com/your-username/lingualeap.git
 cd lingualeap
+```
