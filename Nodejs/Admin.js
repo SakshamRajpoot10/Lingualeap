@@ -3,14 +3,15 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 const cors = require('cors');
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 // MySql Connection
 const dbConfig = {
-    host: 'localhost',
-    user: 'root',
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || 'vbxf817jv1',
-    database: 'elearning',
+    database: process.env.DB_NAME || 'elearning',
+    port: process.env.DB_PORT || 3306,
 };
 
 const createTables = () => {
