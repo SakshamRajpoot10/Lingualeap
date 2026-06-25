@@ -1,25 +1,84 @@
-*{
-    margin:0px;
-    padding:0px;
-}
-.background{
-    background-color: #f4f4f4;
-}
-.text{
-   color: #080A45;
-   
-}
-.butn{
-    background-color: #080A45;
-    color: white;
-    text-decoration: none;
+/* ============================================
+   FOOTER Stylesheet — High-Contrast Duolingo theme
+   ============================================ */
 
+footer.background,
+footer.container-fluid.background {
+    background-color: var(--gray-800) !important; /* Graphite Charcoal Dark background */
+    color: #ffffff !important;
+    border-top: 3px solid var(--gray-700); /* Tactile top border */
 }
-.images{
+
+.text {
+    color: #ffffff !important;
+    font-family: var(--font-primary) !important;
+}
+
+footer h3 {
+    color: #ffffff !important;
+    font-family: var(--font-heading) !important;
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+    margin-top: 0 !important; /* Align headings perfectly at the top */
+}
+
+footer p, 
+footer .text-muted-light {
+    color: #cbd5e1 !important; /* Muted Slate Gray for excellent readability */
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-link {
+    color: #8ee0ff !important; /* Macaw light blue for hyperlinks on dark backgrounds */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transition-fast) !important;
+    display: inline-block;
+}
+
+.footer-link:hover, 
+.footer-link:focus {
+    color: var(--primary-light) !important; /* Lingot Lime green glow on hover */
+    text-decoration: underline !important;
+}
+
+.images {
     width: 20px;
     height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+    filter: brightness(0) invert(1); /* Forces contact icons to render in clean white */
+    transition: var(--transition-fast);
 }
-.textfont{
-    font-size: 12px;
-    font-family: sans-serif;
+
+.contact-list li:hover .images {
+    transform: scale(1.1);
+}
+
+.textfont {
+    font-size: 13px;
+    font-family: var(--font-primary);
+}
+
+hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    opacity: 1 !important;
+    margin: 24px 0;
+}
+
+/* ── Responsiveness ── */
+@media (max-width: 768px) {
+    footer.background {
+        padding: 36px 0 !important;
+    }
+    
+    footer h3 {
+        margin-top: 20px !important;
+    }
+    
+    .col-md-5 footer h3 {
+        margin-top: 0 !important;
+    }
 }

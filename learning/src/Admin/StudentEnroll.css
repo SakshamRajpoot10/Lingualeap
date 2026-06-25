@@ -1,15 +1,120 @@
-*{
-    margin:0px;
-    padding:0px;
+/* ==========================================================================
+   ADMIN PORTAL — STUDENT ENROLLMENT STYLING
+   ========================================================================== */
+
+.student-grid-container {
+  animation: fadeInUp 0.5s ease-out;
 }
-.sidebarr{
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
+
+.student-card {
+  border: 2px solid var(--gray-700) !important; /* Premium Graphite border */
+  border-radius: 16px !important;
+  background-color: #ffffff !important;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s ease !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.imagemost{
-    width: 90px;
-    height: 90px;
-    border: 2px solid black;
-    border-radius: 50%;
+
+.student-card:hover {
+  transform: translateY(-4px) !important;
+  border-color: var(--primary) !important;
+}
+
+/* Avatar & Profile */
+.student-avatar-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-50);
+  color: var(--primary-dark);
+  font-size: 16px;
+  font-weight: 800;
+  border: 2px solid var(--gray-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.student-name-text {
+  font-family: var(--font-heading);
+  color: var(--gray-900);
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.student-email-text {
+  color: var(--gray-300);
+  font-size: 13px;
+}
+
+/* Search Bar Wrapper */
+.student-search-wrapper {
+  position: relative;
+  max-width: 480px;
+  margin-bottom: 24px;
+}
+
+.student-search-input {
+  width: 100%;
+  height: 46px;
+  padding: 10px 16px 10px 42px;
+  font-size: 14.5px;
+  border: 2px solid var(--gray-700) !important;
+  border-radius: 12px !important;
+  background-color: #ffffff;
+  color: var(--gray-800);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.student-search-input:focus {
+  outline: none !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15) !important;
+}
+
+.student-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: var(--gray-300);
+  pointer-events: none;
+}
+
+/* Info Details Box */
+.student-details-box {
+  background-color: var(--gray-100);
+  border: 2px solid var(--gray-700);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.student-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--gray-600);
+}
+
+.student-info-label {
+  font-weight: 600;
+  color: var(--gray-300);
+}
+
+.student-info-value {
+  font-weight: 700;
+  color: var(--gray-900);
+  text-align: right;
+}
+
+/* Header style */
+.student-detail-header {
+  border-bottom: 2px solid var(--gray-700) !important;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
 }

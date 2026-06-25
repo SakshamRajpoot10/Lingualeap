@@ -14,7 +14,7 @@ function TeacherSignup() {
 useEffect(()=>{
   localStorage.setItem('email', email);
    localStorage.setItem('uname', uname);
-})
+}, [email, uname])
   const [values, setValues] = useState({
     uname: "",
     email: "",

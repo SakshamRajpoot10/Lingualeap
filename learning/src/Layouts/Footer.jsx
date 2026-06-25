@@ -1,57 +1,67 @@
-import React from 'react'
+import React from 'react';
 import './Footer.css';
+
 function Footer() {
   return (
-    <>
-
-      <div className="container-fluid background text">
-        <div className="row">
-          <div className="col-md-4 mt-3">
-            <h3><img src="image/footer.png" alt="" /><b>Lingua Leap</b></h3>
-            <p>Subscribe to our newsletter for the latest updates on news features and product releases.</p>
-            <a href="" className='butn p-2'>Enter your email</a>
-            <a href="" className=' butn p-2 mx-5'>Subscribe to Newsletter</a>
-            <h6 className='mt-5 textfont'><img src="image/copyright.png" alt="" className='images mx-2' /> 2024 E-Language Learning Platform . All Rights Reserved .</h6>
+    <footer className="container-fluid background text py-5" id="footer">
+      <div className="container">
+        <div className="row justify-content-between">
+          {/* Column 1: Brand & Description */}
+          <div className="col-md-5 mb-4 mb-md-0 text-start">
+            <h3 className="d-flex align-items-center mb-3 text-white fw-bold">
+              <img src="image/footer.png" alt="Lingua Leap Logo" style={{ width: 36, marginRight: 12 }} />
+              <span>Lingua Leap</span>
+            </h3>
+            <p className="text-muted-light mb-4">
+              Master new languages with personalized 1-on-1 tutoring sessions. Connect with expert teachers worldwide and accelerate your learning journey.
+            </p>
+            <p className="textfont text-muted-light mb-0">
+              &copy; 2026 Lingua Leap. All Rights Reserved.
+            </p>
           </div>
 
-          <div className="col-md-2 text-center">
-            <h3 className='mt-5'><b>Contact Us</b></h3>
-            <h5 className='mt-4 '><img src="image/phone.png" alt="" className='images mx-3' />  Phone</h5>
-            <h5><img src="image/email.png" alt="" className='images mx-3' />  Email</h5>
+          {/* Column 2: Contact Us */}
+          <div className="col-md-3 mb-4 mb-md-0 text-start">
+            <h3 className="fw-bold text-white mb-3">Contact Us</h3>
+            <ul className="list-unstyled contact-list mt-3">
+              <li className="mb-3 d-flex align-items-center">
+                <img src="image/phone.png" alt="Phone" className="images" />
+                <a href="tel:+1234567890" className="footer-link">+1 234 567 890</a>
+              </li>
+              <li className="d-flex align-items-center">
+                <img src="image/email.png" alt="Email" className="images" />
+                <a href="mailto:info@lingualeap.com" className="footer-link">info@lingualeap.com</a>
+              </li>
+            </ul>
           </div>
-          <div className="col-md-3 ">
-            <h3 className='mt-5 text-center'><b>Quick Links</b></h3>
-            <h5 className='mt-4 text-center '>Terms and Conditions</h5>
-            <h5 className='text-center mt-3'>Language Selection</h5>
-            <h5 className='text-center mt-3'>Book a Slot</h5>
-            <h5 className='text-center mt-3'>Sign In/ Login In </h5>
 
+          {/* Column 3: Quick Links */}
+          <div className="col-md-3 text-start">
+            <h3 className="fw-bold text-white mb-3">Quick Links</h3>
+            <ul className="list-unstyled quick-links mt-3">
+              <li className="mb-2"><a href="/terms" className="footer-link">Terms and Conditions</a></li>
+              <li className="mb-2"><a href="/languages" className="footer-link">Language Selection</a></li>
+              <li className="mb-2"><a href="/book-slot" className="footer-link">Book a Slot</a></li>
+              <li><a href="/loginportal" className="footer-link">Sign In / Log In</a></li>
+            </ul>
           </div>
-          <div className="col-md-3 ">
-            <h3 className='mt-5 '><b>Connect with us</b></h3>
-            <h5><img src="image/instagram.png" alt="" className='images mx-4' />Instagram</h5>
-            <h5><img src="image/facebook.png" alt="" className='images mx-4' />Facebook</h5>
-            <h5><img src="image/youtube.png" alt="" className='images mx-4' />Youtube</h5>
-            <h5><img src="image/twittter.png" alt="" className='images mx-4' />Twitter</h5>
-            <h5><img src="image/telegram.png" alt="" className='images mx-4' />Telegram</h5>
-            <h5><img src="image/linkedin.png" alt="" className='images mx-4' />LinkedIn</h5>
+        </div>
 
+        <hr className="my-4" />
+
+        <div className="row align-items-center">
+          <div className="col-md-6 text-center text-md-start">
+            <span className="textfont text-muted-light">Designed by Lingua Leap</span>
           </div>
-          <hr className='mt-5' />
-          <div className="container">
-            <div className="row">
-              <div className="col-md-6 mb-5 ">
-                <h6 className='mx-5'>Designed by lingua Leap</h6>
-              </div>
-              <div className="col-md-6 mb-5 ">
-                <h6 className='mx-5'>/privacy-policy  /terms-and-condition</h6>
-              </div>
-            </div>
+          <div className="col-md-6 text-center text-md-end mt-2 mt-md-0">
+            <a href="/privacy-policy" className="footer-link me-3">Privacy Policy</a>
+            <span className="text-muted-light">/</span>
+            <a href="/terms" className="footer-link ms-3">Terms & Conditions</a>
           </div>
         </div>
       </div>
-    </>
-  )
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

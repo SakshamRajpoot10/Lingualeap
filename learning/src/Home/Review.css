@@ -1,21 +1,75 @@
-*{
-    margin:0px;
-    padding: 0px;
+/* ============================================
+   REVIEWS — Scoped Stylesheet
+   ============================================ */
+
+.backreview {
+    background: linear-gradient(120deg, #f4f4f4 60%, #e0e7ff 100%);
+    padding: 50px 0 30px 0;
 }
-.backreview{
-    background-color: #f4f4f4;
-}
-.imagereview{
-    border: 2px solid white;
+
+.backreview .imagereview {
+    border: 3px solid #fff;
     border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(143, 36, 169, 0.08);
+    background: #fff;
+    padding: 4px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s, transform 0.2s;
 }
-.backcard{
-    background-color: #C3B1E1;
+
+.backreview .backcard {
+    background: rgba(195, 177, 225, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(143, 36, 169, 0.10);
+    transition: box-shadow 0.3s, transform 0.2s;
+    margin-bottom: 10px;
 }
-.content{
+
+.backreview .reviewimage:hover, 
+.backreview .backcard:hover {
+    box-shadow: 0 8px 32px rgba(143, 36, 169, 0.18), 0 2px 16px rgba(70,75,216,0.10);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.backreview .content {
     text-align: center;
+    font-size: 1.08rem;
+    color: #3a2c5a;
+    margin-bottom: 0;
 }
-.reviewimage:hover{
-      box-shadow: 5px 10px 25px rgb(143, 36, 169);
-    
+
+.backreview h1, 
+.backreview h5 {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+.backreview h1.text-center {
+    font-weight: 800;
+    color: #6c3eb6;
+    letter-spacing: 1px;
+}
+
+.backreview h5.text-center {
+    font-weight: 500;
+    color: #7c6f98;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 900px) {
+    .backreview .backcard {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .backreview .backcard {
+        padding: 12px 2vw;
+        border-radius: 16px;
+    }
+    .backreview {
+        padding: 30px 0 15px 0;
+    }
 }

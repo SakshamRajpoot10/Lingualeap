@@ -1,6 +1,6 @@
 import Home from "./Home/Home";
 import Header from "./Layouts/Header";
-import { Route, Routes, Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom"; // Removed Router
 import LoginPortal from './Home/LoginPortal';
 import TeacherSignup from "./Teacher/TeacherSignup";
 import TeacherLogin from "./Teacher/TeacherLogin";
@@ -32,11 +32,7 @@ import StudentProfile from "./Student/Studentprofile";
 import StudCal from "./Student/StudCal";
 import ReviewS from "./Student/ReviewS";
 import ReviewT from "./Teacher/ReviewT";
-
-
-
-
-
+import StudentReviews from "./Teacher/StudentReviews";
 
 function App() {
   return (
@@ -46,12 +42,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/loginportal" element={<LoginPortal />} />
-          <Route path="/reviews" element={<Review />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/footer" element={< Footer />} />
+          <Route path="/reviews" element={<Home />} />
+          <Route path="/about" element={<Home />} />
+          <Route path="/service" element={<Home />} />
+          <Route path="/footer" element={<Home />} />
 
-          
           {/* Teacher side */}
           <Route path="/teachersignup" element={<TeacherSignup />} />
           <Route path="/teacherlogin" element={<TeacherLogin />} />
@@ -61,12 +56,13 @@ function App() {
           <Route path="/studymaterial" element={<StudyMaterial />} />
           <Route path="/meet" element={<Meet />} />
           <Route path="/addreviewT" element={<ReviewT />} />
+          <Route path="/studentreviews" element={<StudentReviews />} />
 
           {/* Student side */}
           <Route path="/studentsignup" element={<Signup />} />
           <Route path="/studentlogin" element={<Login />} />
           <Route path="/select" element={<Select />} />
-          <Route path='/req' element={<Req />} />
+          <Route path='/req' element={<StudCal />} />
           <Route path="/studentprofile" element={<StudentProfile />} />
           <Route path="/presentlearning" element={<PresentLearning />} />
           <Route path="/startmeeting" element={<StartMeeting />} />
@@ -76,16 +72,13 @@ function App() {
           <Route path="/addlanguages" element={<AddLanguages />} />
           <Route path="/addreview" element={<ReviewS />} />
 
-
-
           {/* Admin side */}
           <Route path="/admin" element={<AdminLogin />} />
-            <Route path="/changepassword" element={<ChangePassword />} />
+          <Route path="/changepassword" element={<ChangePassword />} />
           <Route path='/registered' element={<Registered />} />
           <Route path='/studentenroll' element={<StudentEnroll />} />
           <Route path='/teacherdetail' element={<TeacherDetail />} />
           <Route path='/adddrop' element={<AddDrop />} />
-
         </Routes>
       </div>
     </>

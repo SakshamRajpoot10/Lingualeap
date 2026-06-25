@@ -1,105 +1,120 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-   
+/* ==========================================================================
+   ADMIN PORTAL — TEACHER MANAGEMENT STYLING
+   ========================================================================== */
+
+.teacher-grid-container {
+  animation: fadeInUp 0.5s ease-out;
 }
 
-.container1 {
-    display: grid;
-    grid-template-areas: 
-        "header header"
-        "aside main";
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: auto 1fr;
-    height: 100vh;
+.teacher-card {
+  border: 2px solid var(--gray-700) !important; /* Premium Graphite border */
+  border-radius: 16px !important;
+  background-color: #ffffff !important;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s ease !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-
-aside {
-    grid-area: aside;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
-    height: 700px;
-    margin-top:5px;
-    margin-right:10px;
+.teacher-card:hover {
+  transform: translateY(-4px) !important;
+  border-color: var(--primary) !important;
 }
 
-aside ul {
-    list-style: none;
-    padding: 0;
+/* Avatar & Profile */
+.avatar-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-50);
+  color: var(--primary-dark);
+  font-size: 16px;
+  font-weight: 800;
+  border: 2px solid var(--gray-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-aside ul li {
-    margin-bottom: 15px;
+.teacher-name {
+  font-family: var(--font-heading);
+  color: var(--gray-900);
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.2;
 }
 
-aside ul li a {
-    text-decoration: none;
-    color: #080A45;
-    font-size: 16px;
+.teacher-email {
+  color: var(--gray-300);
+  font-size: 13px;
 }
 
-aside h2 {
-    color:#080A45;
-}
-.main1 {
-    grid-area: main;
-    padding: 20px;
-    background-color: #f4f4f4;
-    margin-left: none;
+/* Search Bar Wrapper */
+.admin-search-wrapper {
+  position: relative;
+  max-width: 480px;
+  margin-bottom: 24px;
 }
 
-h1, h2 {
-    margin: 0;
-    color: #080A45;
+.admin-search-input {
+  width: 100%;
+  height: 46px;
+  padding: 10px 16px 10px 42px;
+  font-size: 14.5px;
+  border: 2px solid var(--gray-700) !important;
+  border-radius: 12px !important;
+  background-color: #ffffff;
+  color: var(--gray-800);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.teacher-grid1 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 20px;
-    color:#080A45;
-
+.admin-search-input:focus {
+  outline: none !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15) !important;
 }
 
-.teacher-card1 {
-    background-color: #e0e0e0;
-    padding: 20px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 8px;
-    color:#080A45;
+.admin-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: var(--gray-300);
+  pointer-events: none;
 }
 
-.teacher-card1 img {
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+/* Info Details Box */
+.info-details-box {
+  background-color: var(--gray-100);
+  border: 2px solid var(--gray-700);
+  border-radius: 12px;
+  padding: 12px 14px;
 }
 
-.teacher-card1 h3 {
-    margin: 10px 0 5px 0;
-    font-size: 16px;
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--gray-600);
 }
 
-.teacher-card1 p {
-    margin: 0;
-    font-size: 14px;
-    color: #555;
+.info-label {
+  font-weight: 600;
+  color: var(--gray-300);
 }
-.btn
-{
-    margin-top: 20px;
+
+.info-value {
+  font-weight: 700;
+  color: var(--gray-900);
+  text-align: right;
 }
-.name
-{
-    margin-top: 20px;
+
+/* Details Table Fallback Header styling */
+.admin-detail-header {
+  border-bottom: 2px solid var(--gray-700) !important;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
 }

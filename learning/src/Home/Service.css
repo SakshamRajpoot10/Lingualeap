@@ -1,13 +1,78 @@
-*{
-    margin:0px;
-    padding: 0px;
+/* ============================================
+   SERVICES / FEATURES — Scoped Stylesheet
+   ============================================ */
+
+.feature-card {
+    background: rgba(246, 248, 255, 0.98);
+    border-radius: 22px;
+    box-shadow: 0 2px 16px rgba(70,75,216,0.08);
+    transition: box-shadow 0.3s, transform 0.2s, background 0.3s;
+    border: none;
+    padding: 32px 18px 24px 18px;
+    margin: 0 auto;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.featureimage{
-    width: auto;
-    height: 300px;
+.feature-card:hover {
+    box-shadow: 0 8px 32px rgba(70,75,216,0.18), 0 2px 16px rgba(110,231,183,0.10);
+    background: #e0e7ff;
+    transform: translateY(-6px) scale(1.03);
 }
-.card:hover{
-  box-shadow: 5px 10px 15px rgb(163, 163, 225);
-  margin-left:4px;
+
+.feature-card .featureimage {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 18px;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(70,75,216,0.08);
+    background: #fff;
+    padding: 10px;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.feature-card:hover .featureimage {
+    box-shadow: 0 4px 24px rgba(70,75,216,0.18);
+    transform: scale(1.07);
+}
+
+.feature-card h4 {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    color: #464bd8;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.feature-card p {
+    color: #555;
+    font-size: 1.08rem;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+@media (max-width: 900px) {
+    .feature-card {
+        min-height: 340px;
+        padding: 20px 8px 16px 8px;
+    }
+    .feature-card .featureimage {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    .feature-card {
+        min-height: 220px;
+        padding: 12px 2vw;
+        border-radius: 14px;
+    }
+    .feature-card .featureimage {
+        width: 60px;
+        height: 60px;
+        padding: 4px;
+    }
 }

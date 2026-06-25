@@ -1,7 +1,89 @@
-*{
-    margin:0px;
-    padding:0px;
+/* ============================================
+   LOGIN PORTAL — Scoped Stylesheet
+   ============================================ */
+
+.backloginportal {
+    background: linear-gradient(120deg, #e0e7ff 0%, #f4f4f4 100%);
+    min-height: 60vh;
+    padding: 40px 0;
 }
-.backloginportal{
-    background-color: #f4f4f4;
+
+.backloginportal .card {
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(70,75,216,0.10);
+    transition: box-shadow 0.3s, transform 0.2s;
+    border: none;
+}
+
+.backloginportal .card:hover {
+    box-shadow: 0 8px 32px rgba(70,75,216,0.18);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.backloginportal .card-title {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    color: #464bd8;
+    letter-spacing: 1px;
+}
+
+.backloginportal .card-text {
+    color: #22223b;
+    font-size: 1rem;
+}
+
+.backloginportal .btn-primary {
+    background-color: #464bd8 !important;
+    background: linear-gradient(90deg, #464bd8 60%, #6ee7b7 100%) !important;
+    color: #ffffff !important;
+    border: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 12px 0;
+    border-radius: 30px;
+    box-shadow: 0 4px 16px rgba(70, 75, 216, 0.2);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+    letter-spacing: 1px;
+    display: block;
+    text-align: center;
+    width: 75% !important; /* Forces uniform size and centering */
+    margin: 0 auto;
+    text-decoration: none !important;
+}
+
+.backloginportal .btn-primary:hover, 
+.backloginportal .btn-primary:focus {
+    background-color: #2b30b4 !important;
+    background: linear-gradient(90deg, #2b30b4 60%, #5adbb5 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 24px rgba(70, 75, 216, 0.3);
+    transform: translateY(-2px) scale(1.04);
+    text-decoration: none !important;
+}
+
+.backloginportal .card img {
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(70,75,216,0.08);
+    background: #fff;
+    padding: 6px;
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .backloginportal .card {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .backloginportal .card {
+        padding: 12px 2vw;
+        border-radius: 16px;
+    }
+    .backloginportal {
+        padding: 20px 0;
+    }
 }

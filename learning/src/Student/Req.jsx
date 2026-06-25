@@ -14,11 +14,11 @@ export default function Req() {
                     <Calenda />
                 </div>
                 <div id="right-14">
-                    <div class="combined">
-                        <div class="dot1-14"></div>
-                        <div class="msg1-14"><p align="center">Waiting..</p></div>
-                        <div class="dot2-14"></div>
-                        <div class="wait-14"><p class="waitt-14">Alloted</p></div>
+                    <div className="combined">
+                        <div className="dot1-14"></div>
+                        <div className="msg1-14"><p align="center">Waiting..</p></div>
+                        <div className="dot2-14"></div>
+                        <div className="wait-14"><p className="waitt-14">Alloted</p></div>
                         <center><Link to="/presentlearning" className="btn btn-info mt-4 mb-4 studbtn">Student Dashboard</Link></center>
 
                     </div>

@@ -1,12 +1,140 @@
-*{
-    margin:0px;
-    padding: 0px;
+/* ==========================================================================
+   ADMIN PORTAL LOGIN — STYLE DEFINITIONS
+   ========================================================================== */
+
+.backlogin {
+  background-color: var(--gray-100) !important;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
-.backlogin{
-    background-color: #f4f4f4;
+
+.login-wrapper {
+  width: 100%;
+  max-width: 440px;
 }
-.imagelogin{
-    width: 25px;
-    height: 25px;
-   background-color: white;
+
+.admin-login-box {
+  border: 2px solid var(--gray-700) !important; /* Premium Graphite border */
+  border-radius: 16px !important;
+  background-color: #ffffff !important;
+  overflow: hidden;
+}
+
+/* Header Banner */
+.admin-title-banner {
+  background-color: var(--primary) !important;
+  border-bottom: 2px solid var(--gray-700) !important;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.admin-title-banner h2 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: #ffffff !important;
+  margin-bottom: 6px;
+  font-size: 24px;
+}
+
+.admin-title-banner p {
+  color: var(--primary-100) !important;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* Form Styling */
+.admin-login-form {
+  padding: 32px 28px;
+}
+
+.form-group-3d {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group-3d label {
+  display: block;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+  font-size: 13.5px;
+}
+
+.inpt-3d {
+  width: 100%;
+  height: 48px;
+  padding: 10px 16px;
+  font-size: 15px;
+  border: 2px solid var(--gray-700) !important;
+  border-radius: 12px !important;
+  background-color: #ffffff;
+  color: var(--gray-800);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  font-family: var(--font-primary);
+}
+
+.inpt-3d:focus {
+  outline: none !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15) !important;
+}
+
+/* Forgot Password Link */
+.forgot-password-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -10px;
+  margin-bottom: 24px;
+}
+
+.forgot-password-link {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.forgot-password-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Modal Overlay styling */
+.security-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 4, 55, 0.6); /* Deep midnight overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.security-modal-card {
+  background-color: #ffffff;
+  border: 2px solid var(--gray-700) !important;
+  border-radius: 16px !important;
+  width: 100%;
+  max-width: 460px;
+  padding: 28px;
+  animation: scaleUp 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }

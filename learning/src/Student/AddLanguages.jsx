@@ -190,10 +190,8 @@ function AddLanguages() {
     };
 
     const handleConfirmSelection = () => {
-        // Here you can navigate to another route or perform any action with the selectedLanguage
         console.log('Selected Language:', selectedLanguage);
-        // Navigate to another page or handle the selected language as needed
-        navigate('/req');
+        navigate('/studentcalendar');
     };
 
     return (
@@ -208,11 +206,16 @@ function AddLanguages() {
                         </div>
                         <hr />
                         <h6 className="mt-4 mb-1">
+                            <img src="image/profiles.png" alt="" className="view mx-2" />
+                            <Link to="/studentprofile">Profile</Link>
+                        </h6>
+                        <hr />
+                        <h6 className="mt-4 active">
                             <img src="image/select.png" alt="" className="view mx-2" />
                             <Link to="/addlanguages">Select Language</Link>
                         </h6>
                         <hr />
-                        <h6 className="mt-4 active">
+                        <h6 className="mt-4">
                             <img src="image/coursess.png" alt="" className="view mx-2" />
                             <Link to="/presentlearning">Present Learning</Link>
                         </h6>
@@ -223,58 +226,59 @@ function AddLanguages() {
                         </h6>
                         <hr />
                         <h6 className="mt-4">
-                            <img src="image/updatedcalendar.png" alt="" className="view mx-2" />
-                            <Link to="/addreview">Add Review</Link>
+                            <img src="image/studymaterial.png" alt="" className="view mx-2" />
+                            <Link to="/material">Study Material</Link>
                         </h6>
                         <hr />
                         <h6 className="mt-4">
                             <img src="image/updatedcalendar.png" alt="" className="view mx-2" />
+                            <Link to="/addreview">Add Review</Link>
+                        </h6>
+                        <hr />
+                        <h6 className="mt-4" onClick={() => localStorage.clear()} style={{ cursor: 'pointer' }}>
+                            <img src="image/logout.png" alt="" className="view mx-2" style={{ opacity: 0.7 }} />
                             <Link to="/">Log Out</Link>
                         </h6>
                         <hr />
                     </div>
 
-                    <div className="col-md-9">
-                        <h1 className='mt-4 mb-4 mx-5'><u>Select Languages</u></h1>
-                        <div className="container">
+                    <div className="col-md-9 p-5 overflow-auto" style={{ height: '100vh' }}>
+                        <h1 className='fw-bold text-dark mb-4'><b>Select a Language</b></h1>
+                        <p className="text-muted mb-4">Choose a language to begin. Banners represent certified courses aligned to international CEFR standards.</p>
+                        <div className="container-fluid p-0">
                             <div className="row">
                                 {/* List of languages */}
                                 {['German', 'English', 'Korean', 'Japanese', 'Indonesian', 'French'].map((language) => (
-                                    <div className="col-md-4" key={language}>
-                                        <div className="container">
-                                            <div className="row">
-                                                <div className="col-md-12 text-center border">
-                                                    <img 
-                                                        src={`image/${language.toLowerCase()}.png`} 
-                                                        alt="" 
-                                                        className='chapter admin_button mt-2 border border-1' 
-                                                    />
-                                                    <h1 className='text-center'><b>{language}</b></h1>
-                                                    <button 
-                                                        className={`btn ${selectedLanguage === language ? 'btn-success' : 'btn-primary'} mb-2 px-4`} 
-                                                        onClick={() => handleLanguageSelect(language)}
-                                                    >
-                                                        {selectedLanguage === language ? 'Selected' : 'Select'}
-                                                    </button>
-                                                </div>
+                                    <div className="col-md-4 mb-4" key={language}>
+                                        <div className="card text-center p-3 h-100 d-flex flex-column justify-content-between align-items-center">
+                                            <div className="w-100 d-flex justify-content-center align-items-center mb-3" style={{ height: '140px', overflow: 'hidden', borderRadius: '12px' }}>
+                                                <img 
+                                                    src={`image/${language.toLowerCase()}.png`} 
+                                                    alt={language} 
+                                                    className='img-fluid admin_button'
+                                                    style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+                                                />
                                             </div>
+                                            <h3 className='fw-bold mb-3' style={{ fontSize: '1.25rem' }}>{language}</h3>
+                                            <button 
+                                                className={`btn ${selectedLanguage === language ? 'btn-success' : 'btn-primary'} px-4 w-100`} 
+                                                onClick={() => handleLanguageSelect(language)}
+                                            >
+                                                {selectedLanguage === language ? 'Selected' : 'Select'}
+                                            </button>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="container mt-4">
-                            <div className="row">
-                                <div className="col-md-12 text-center">
-                                    <button 
-                                        className="btn btn-primary px-4" 
-                                        onClick={handleConfirmSelection} 
-                                        disabled={!selectedLanguage}
-                                    >
-                                        Confirm
-                                    </button>
-                                </div>
-                            </div>
+                        <div className="text-center mt-4 pt-3 border-top">
+                            <button 
+                                className="btn btn-primary btn-lg px-5" 
+                                onClick={handleConfirmSelection} 
+                                disabled={!selectedLanguage}
+                            >
+                                Confirm Language Selection
+                            </button>
                         </div>
                     </div>
                 </div>

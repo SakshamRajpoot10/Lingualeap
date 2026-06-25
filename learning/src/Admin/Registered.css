@@ -7,13 +7,13 @@ body {
 
 .container3 {
     display: grid;
-    grid-template-areas: "header header""aside main";
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-template-areas: 
+        "header header"
+        "aside main";
     grid-template-columns: 200px 1fr;
     grid-template-rows: auto 1fr;
     height: 100vh;
 }
-
 
 aside {
     grid-area: aside;
@@ -36,22 +36,35 @@ aside ul li a {
     color: #080A45;
     font-size: 16px;
 }
-aside h2{
-    color:#080A45;
+
+aside h2 {
+    color: #080A45;
 }
 
 .main3 {
     grid-area: main;
     padding: 20px;
     background-color: #f4f4f4;
+    overflow-y: auto;
 }
 
 .language-grid {
-  display: grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 10px;
-    color:#080A45;
+    color: #080A45;
+}
+
+@media (max-width: 900px) {
+    .language-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .language-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .language-card {
@@ -63,9 +76,17 @@ aside h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius:16px;
-    color:#080A45;
+    border-radius: 16px;
+    color: #080A45;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
+
+.language-card:hover {
+    background-color: #d6d6d6;
+    transition: background 0.2s;
+}
+
 .drop-button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -75,13 +96,17 @@ aside h2{
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
 .drop-button:hover {
     background-color: #ff3333;
 }
 
-.language-card img{
+.language-card img {
     height: 100px;
     width: 150px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    object-fit: cover;
 }

@@ -1,16 +1,68 @@
-*{
-    margin:0px;
-    padding: 0px;
+
+
+.tutor-title {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    font-size: 2.7rem;
+    font-weight: 800;
+    color: #464bd8;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
 }
-.tutor{
-    font-family: Bureau grot condensed, sans-serif;;
-    font-size: 70px;
-    font-weight: 600;
+
+.tutor-desc {
+    font-size: 1.15rem;
+    color: #444;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    margin-bottom: 22px;
 }
-.tutor_image{
-    margin-top: 20px;
-    margin-left: 150px;
-    width: 500px;
-    height: 300px;
-    margin-bottom: 20px;
+
+.tutor-highlight {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1.08rem;
+    font-weight: 500;
+    color: #3a2c5a;
+    background: rgba(195, 177, 225, 0.18);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 12px rgba(70,75,216,0.06);
+}
+
+.tutor_image {
+    margin-top: 10px;
+    width: 90%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(70,75,216,0.10);
+    object-fit: cover;
+    background: #fff;
+}
+
+@media (max-width: 900px) {
+    .tutor-title {
+        font-size: 2rem;
+    }
+    .tutor_image {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tutor-title {
+        font-size: 1.3rem;
+    }
+    .tutor-desc {
+        font-size: 1rem;
+    }
+    .tutor_image {
+        max-width: 98vw;
+        border-radius: 10px;
+    }
+    .tutor-highlight {
+        font-size: 1rem;
+        padding: 10px 6px;
+    }
 }

@@ -27,40 +27,31 @@ connection.connect((err)=>{
 
 
 
-
-
 app.post('/mark',(req,res)=>{
    
     const rollno = req.body.rollno;
-    const sql = 'SELECT * FROM mark  WHERE rollno=? ';
-    connection.query(sql,[rollno],(error,results,fields)=>{
+    const sql = 'SELECT * FROM mark WHERE rollno = ?';
+    connection.query(sql,[rollno],(error,results)=>{
         if(error){
-            console.error('Error inserting data into student table:',error);
-            return;
+            console.error('Error fetching data from mark table:',error);
+            return res.status(500).send('Database error');
         }
-        // res.send(result);
         res.json(results);
+        console.log('Student Marksheet Details fetched successfully');
+    });
+})
 
-         console.log('Student Marksheet  Details added successfully');
-         
-     });
-    })
-    app.post('/selectimage',(req,res)=>{
-        const id = req.body.id;
-        const category = req.body.category;
-        const imageURL = req.body.imageURL;
-        const sql = 'SELECT * FROM image ';
-        connection.query(sql,[id,category,imageURL],(error,result,fields)=>{
+app.post('/selectimage',(req,res)=>{
+        // If you want to filter by id/category/imageURL, add WHERE clause and parameters
+        const sql = 'SELECT * FROM image';
+        connection.query(sql,(error,result)=>{
             if(error){
-                console.error('Error inserting data into student table:',error);
-                return;
+                console.error('Error fetching data from image table:',error);
+                return res.status(500).send('Database error');
             }
-            // res.send(result);
             res.json(result);
-    
-             console.log('Student Details added successfully');
-             
-         });
+            console.log('Image Details fetched successfully');
+        });
     });
 
 

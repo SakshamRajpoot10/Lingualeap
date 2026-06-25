@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-
 }
 
 .container4 {
@@ -112,7 +111,7 @@ h2 {
 
 .language-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     margin-top: 10px;
     color: #080A45;
@@ -120,7 +119,7 @@ h2 {
 
 .language-card {
     background-color: #e0e0e0;
-    padding: 0px;
+    padding: 16px; /* Added padding for better spacing */
     text-align: center;
     font-size: 18px;
     font-weight: bold;
@@ -129,6 +128,7 @@ h2 {
     align-items: center;
     border-radius: 11px;
     color: #080A45;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .language-card img {
@@ -136,6 +136,7 @@ h2 {
     width: 150px;
     border-radius: 8px;
     margin-bottom: 10px;
+    object-fit: cover;
 }
 
 .language-card h3 {
@@ -147,12 +148,34 @@ h2 {
     background-color: #ff5e5e;
     color: white;
     border: none;
-    padding: 6px;
+    padding: 8px 16px;
     margin-bottom: 10px;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
 }
 
 .language-card button:hover {
     background-color: #ff4e4e;
+}
+
+/* Optional: Differentiate Add/Drop buttons if you add a class in JSX
+.language-card .add-btn {
+    background-color: #4caf50;
+}
+.language-card .add-btn:hover {
+    background-color: #388e3c;
+}
+*/
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .language-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .language-card img {
+        width: 100px;
+        height: 70px;
+    }
 }

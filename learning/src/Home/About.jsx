@@ -3,7 +3,7 @@ import './About.css';
 function About() {
   return (
     <>
-      <div className="container-fluid bg-white">
+      <div className="container-fluid bg-white" id="about">
         <div className="container aboutheight ">
           <div className="row">
             <div className="col-md-5 mt-5">

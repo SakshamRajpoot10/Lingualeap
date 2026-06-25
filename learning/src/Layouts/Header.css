@@ -1,55 +1,165 @@
-.weblogo{
-  width:45px;
-  height: 50px;
-}
-.navbar-nav li{
-    padding:0 10px;
-}
-.navbar  link:hover{
-    color: #080A45;
-    font-weight: 600;
-    font-size: 20px;
-    font-family: sans-serif;
+/* ============================================
+   HEADER — Professional Navigation Bar
+   ============================================ */
 
+.header-navbar {
+  padding: 12px 0 !important;
+  background: rgba(255, 255, 255, 0.97) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.background
-{
-  
-  background-color: #686868 #f1e8e8;
-  color:black
-}
-.navbar link:hover{
-  text-shadow: 1px 1px grey;
-  text-decoration: underline;
-  color: black;
 
- 
+.header-navbar:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06), 0 6px 16px rgba(0, 0, 0, 0.04);
+}
 
+/* Brand / Logo */
+.header-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
 }
-.height{
-  height: 70px;
-}
-button{
-  border-radius: 0px;
-  
-}
-.backimgnav{
-  background-color: #388da8;
-  border-radius: 30px;
-  font-size: 22px;
-}
-.font{
-  font-family: "Gill Sans", sans-serif;;
-  
-}
-.fonttsize{
-  font-size: 22px;
-  color: black;
-}
-.nav-item{
-  color: black;
 
+.header-logo:hover {
+  transform: scale(1.05);
 }
-.teextblue{
-  color: #5606f5;
+
+.header-brand-text {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: -0.5px;
+}
+
+.header-brand-highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Navigation Links */
+.header-nav-items {
+  gap: 4px;
+}
+
+.header-nav-items .nav-link {
+  color: #4b5563 !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 8px 18px !important;
+  border-radius: 10px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  letter-spacing: 0.01em;
+}
+
+.header-nav-items .nav-link:hover {
+  color: #4f46e5 !important;
+  background: rgba(79, 70, 229, 0.06);
+}
+
+.header-nav-items .nav-link.header-nav-active {
+  color: #4f46e5 !important;
+  font-weight: 600;
+  background: rgba(79, 70, 229, 0.08);
+}
+
+.header-nav-items .nav-link.header-nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+}
+
+/* CTA Button */
+.header-cta-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 10px 26px !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(102, 126, 234, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 12px;
+}
+
+.header-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(102, 126, 234, 0.45);
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.header-cta-btn:active {
+  transform: translateY(0);
+}
+
+.header-cta-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.header-cta-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Toggler for mobile */
+.header-toggler {
+  border: 1.5px solid #d1d5db !important;
+  border-radius: 8px !important;
+  padding: 6px 10px !important;
+}
+
+.header-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15) !important;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .header-navbar {
+    padding: 10px 16px !important;
+  }
+
+  .header-nav-items {
+    padding: 16px 0 8px;
+    gap: 4px;
+  }
+
+  .header-nav-items .nav-link {
+    padding: 10px 16px !important;
+    border-radius: 8px;
+  }
+
+  .header-nav-items .nav-link.header-nav-active::after {
+    display: none;
+  }
+
+  .header-cta-btn {
+    margin-left: 0;
+    margin-top: 8px;
+    justify-content: center;
+    width: 100%;
+  }
 }

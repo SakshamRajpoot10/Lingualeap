@@ -10,7 +10,7 @@ function German() {
   useEffect(() => {
     let name2 = localStorage.getItem("uname");
     setName2(name2);
-    axios.post(process.env.REACT_APP_API_URL+'/mylanguages')
+    axios.get(process.env.REACT_APP_API_URL+'/mylanguages')
       .then(response => {
         setLanguages(response.data);
       })
@@ -25,45 +25,46 @@ function German() {
     <>
       <div className="container-fluid ">
         <div className="row">
-        <div className="col-md-3 bg-white ">
-            <div className="mt-2 text-center backSTART ">
-              <img src="image/images2.png" alt="" className="mt-2 " />
-              <h4>
-                <b>{name2}</b>
-              </h4>
+          <div className="col-md-3 bg-white">
+            <div className="mt-2 text-center backSTART">
+              <img src="image/images2.png" alt="" className="mt-2" />
+              <h4><b>{name2}</b></h4>
               <h6 className="pb-3">Student</h6>
             </div>
             <hr />
-            <h6 className="mt-4 mb-5">
-              {" "}
+            <h6 className="mt-4 mb-1">
+              <img src="image/profiles.png" alt="" className="view mx-2" />
+              <Link to="/studentprofile">Profile</Link>
+            </h6>
+            <hr />
+            <h6 className="mt-4">
               <img src="image/select.png" alt="" className="view mx-2" />
               <Link to="/addlanguages">Select Language</Link>
             </h6>
             <hr />
-            <h6 className="mt-4  active">
-              {" "}
-              <img
-                src="image/coursess.png"
-                alt=""
-                className="view mx-2 "
-              />{" "}
+            <h6 className="mt-4 active">
+              <img src="image/coursess.png" alt="" className="view mx-2" />
               <Link to="/presentlearning">Present Learning</Link>
             </h6>
             <hr />
-            {/* <h6 className="mt-4 ">
-              {" "}
-              <img src="image/profiles.png" alt="" className="view mx-2" />
-              <Link to="/startmeeting">Start Meeting</Link>
-            </h6>
-            <hr /> */}
             <h6 className="mt-4">
-              {" "}
-              <img
-                src="image/updatedcalendar.png"
-                alt=""
-                className="view mx-2"
-              />
-              <Link to="/studentcalendar"> Request Status</Link>
+              <img src="image/updatedcalendar.png" alt="" className="view mx-2" />
+              <Link to="/studentcalendar">Request Status</Link>
+            </h6>
+            <hr />
+            <h6 className="mt-4">
+              <img src="image/studymaterial.png" alt="" className="view mx-2" />
+              <Link to="/material">Study Material</Link>
+            </h6>
+            <hr />
+            <h6 className="mt-4">
+              <img src="image/updatedcalendar.png" alt="" className="view mx-2" />
+              <Link to="/addreview">Add Review</Link>
+            </h6>
+            <hr />
+            <h6 className="mt-4" onClick={() => localStorage.clear()} style={{ cursor: 'pointer' }}>
+              <img src="image/logout.png" alt="" className="view mx-2" style={{ opacity: 0.7 }} />
+              <Link to="/">Log Out</Link>
             </h6>
             <hr />
           </div>
