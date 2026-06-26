@@ -1,5 +1,7 @@
 # 🌐 LinguaLeap - Personalized Language Learning Platform
 
+LIVE LINK - https://lingualeap-learning.vercel.app/
+
 > _“Learn, Connect and Grow” — Bridging borders through language._
 
 ![LinguaLeap Banner](./screenshots/01_homepage.png)
