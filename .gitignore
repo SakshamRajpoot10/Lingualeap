@@ -16,3 +16,7 @@ learning/build/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Database helper scripts and logs
+Nodejs/import_db.js
+Nodejs/import.log

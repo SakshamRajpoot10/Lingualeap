@@ -16,7 +16,7 @@
     "start": "node Admin.js",
     "server": "nodemon Admin.js"
   },
-  "author": "",
+  "author": "Saksham Rajpoot",
   "license": "ISC",
   "description": ""
 }

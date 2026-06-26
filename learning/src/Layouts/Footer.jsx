@@ -51,7 +51,7 @@ function Footer() {
 
         <div className="row align-items-center">
           <div className="col-md-6 text-center text-md-start">
-            <span className="textfont text-muted-light">Designed by Lingua Leap</span>
+            <span className="textfont text-muted-light">Designed & Developed by Saksham Rajpoot</span>
           </div>
           <div className="col-md-6 text-center text-md-end mt-2 mt-md-0">
             <a href="/privacy-policy" className="footer-link me-3">Privacy Policy</a>

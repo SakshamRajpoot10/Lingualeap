@@ -140,6 +140,13 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(cors());
 
+// Developer Credit Middleware
+app.use((req, res, next) => {
+    res.setHeader('X-Developer', 'Saksham Rajpoot');
+    res.setHeader('X-Project', 'LinguaLeap');
+    next();
+});
+
 // Update teacher profile
 app.post('/teacherprofile', (req, res) => {
     const { uname, email, mobileno, batch, languages, certification, location } = req.body;
@@ -928,6 +935,23 @@ app.get('/api/student/my-teachers', (req, res) => {
     });
 });
 
+// Developer Info Endpoint
+app.get('/api/developer', (req, res) => {
+    res.json({
+        status: "success",
+        developer: "Saksham Rajpoot",
+        role: "Full Stack Developer",
+        project: "LinguaLeap",
+        description: "Personalized Language Learning Platform connecting students and teachers globally.",
+        techStack: {
+            frontend: ["React.js", "Bootstrap", "React Router", "Axios"],
+            backend: ["Node.js", "Express.js"],
+            database: ["MySQL"]
+        }
+    });
+});
+
 app.listen(port, () => {
     console.log(`Server is running on localhost:${port}`);
+    console.log('Developed and Built by Saksham Rajpoot');
 });
